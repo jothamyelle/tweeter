@@ -7,7 +7,7 @@ function createTweetElement(tweetData) {
   var $avatar = tweetData.user.avatars.small;
   var $user = tweetData.user.name;
   var $handle = tweetData.user.handle;
-  var $userTweet = tweetData.content;
+  var $userTweet = tweetData.content.text;
 
   return `
   <article>
@@ -17,7 +17,7 @@ function createTweetElement(tweetData) {
       <span class="handle">${$handle}</span>
     </header>
     <div class="tweetArea">
-      <span class="tweetText">${$userTweet.text}</span>
+      <span class="tweetText">${$userTweet}</span>
     </div>
     <footer>
       <div class="tweetAge">
