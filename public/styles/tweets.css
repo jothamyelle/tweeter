@@ -2,6 +2,10 @@
   border:solid #bfbfbf 1px;
   border-radius:5px;
   margin:1em 2em;
+  opacity:0.7;
+}
+#tweet-container:hover, #tweet-container:hover .showOnHover {
+  opacity:1;
 }
 
 #tweet-container article header {
@@ -22,16 +26,31 @@
 }
 
 #tweet-container article footer {
-  padding:1em;
+  padding:1em 1em 2.25em;
   font-size:.75em;
   border-top:solid #bfbfbf 1px;
 }
 
-article img {
+article img.avatar {
   height:50px;
   width:50px;
 }
 
-#tweet-container div {
+article footer .showOnHover {
+  opacity:0;
+  float:right;
+}
+
+article footer img {
+  height:1.5em;
+  width:1.5em;
+}
+
+#tweet-container .tweetAge {
+  max-width:50%;
+  float:left;
+}
+
+#tweet-container .tweetArea {
   padding:2em 1em;
 }
