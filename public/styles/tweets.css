@@ -1,10 +1,15 @@
-#tweet-container {
-  border:solid #bfbfbf 1px;
+#tweet-container article {
   border-radius:5px;
   margin:1em 2em;
   opacity:0.7;
 }
-#tweet-container:hover, #tweet-container:hover .showOnHover {
+
+#tweet-container article {
+  border:solid #bfbfbf 1px;
+  margin-bottom:2em;
+}
+
+#tweet-container article:hover, #tweet-container article:hover .showOnHover {
   opacity:1;
 }
 
