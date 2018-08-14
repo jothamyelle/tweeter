@@ -8,6 +8,10 @@ function createTweetElement(tweetData) {
   var $user = tweetData.user.name;
   var $handle = tweetData.user.handle;
   var $userTweet = tweetData.content.text;
+  var todaysDate = new Date();
+  var tweetDate = new Date(tweetData.created_at);
+  var newAge = todaysDate - tweetDate;
+  var $tweetAge = Math.floor(newAge / (1000*60*60*24));
 
   return `
   <article>
@@ -21,7 +25,7 @@ function createTweetElement(tweetData) {
     </div>
     <footer>
       <div class="tweetAge">
-        <span>10 Days Ago</span>
+        <span>${$tweetAge} days ago</span>
       </div>
       <div class="showOnHover">
         <img src="images/reply.png">
