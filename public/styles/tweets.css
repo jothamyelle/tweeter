@@ -1,0 +1,37 @@
+#tweet-container {
+  border:solid #bfbfbf 1px;
+  border-radius:5px;
+  margin:1em 2em;
+}
+
+#tweet-container article header {
+  padding:.5em;
+  background-color: #eee;
+  border-radius:5px;
+}
+
+#tweet-container .user {
+  font-weight:bold;
+  font-size:1.5em;
+  position: absolute;
+  margin-left:.5em;
+}
+
+#tweet-container .handle {
+  float: right;
+}
+
+#tweet-container article footer {
+  padding:1em;
+  font-size:.75em;
+  border-top:solid #bfbfbf 1px;
+}
+
+article img {
+  height:50px;
+  width:50px;
+}
+
+#tweet-container div {
+  padding:2em 1em;
+}
