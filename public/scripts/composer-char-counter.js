@@ -3,6 +3,11 @@ $(document).ready(function() {
     let count = 140 - (this.value.length);
     let parent = $(this).parent().get( 0 ); 
     let counter = $(parent).children(".counter");
-    console.log(counter.html(count));
+    if (count <= 0) {
+      counter.css("color","red");
+    } else {
+      counter.css("color","black");
+    }
+    counter.html(count);
   });
 });
