@@ -15,7 +15,7 @@ $(document).ready(function() {
     $.post("/tweets", input)
     .done(function(data) {
       var newTweet = createTweetElement(data);
-      $("#tweet-container").append(newTweet);
+      $("#tweet-container").prepend(newTweet);
       $("#textInput").val('');
     });
   });
