@@ -23,7 +23,7 @@ $(document).ready(function() {
       return false;
     }
 
-    $("#errorMessage").css("display","none");
+    $("#errorMessage").slideUp();
     var safeText = `text=${input}`;
   
     $.post("/tweets", safeText)
