@@ -51,6 +51,6 @@ function loadTweets() {
   });
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
   loadTweets();
 });
