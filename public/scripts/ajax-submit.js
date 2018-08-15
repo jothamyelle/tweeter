@@ -1,18 +1,32 @@
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 $(document).ready(function() {
   $("form").on("submit", function(event) {
+    event.preventDefault();
     if ($("#textInput").val() === "") {
-      $("#errorMessage").html("Sorry, you can't submit an empty tweet!").css("display","block");
+      $("#errorMessage").text("Sorry, you can't submit an empty tweet!").css("display","block");
       return false;
     }
     if ($("#textInput").val().length > 140) {
-      $("#errorMessage").html("Sorry, you can't submit a tweet that's longer than 140 characters!").css("display","block");
+      $("#errorMessage").text("Sorry, you can't submit a tweet that's longer than 140 characters!").css("display","block");
       return false;
     }
+
+    var input = escape($("#textInput").val());
+
+    if (input.indexOf("&lt;") >= 0 || input.indexOf("&gt;") >= 0) {
+      $("#errorMessage").text(`Sorry, your post can't contain these characters: < >`).css("display","block");
+      return false;
+    }
+
     $("#errorMessage").css("display","none");
-    event.preventDefault();
-    var input = $("form").serialize();
+    var safeText = `text=${input}`;
   
-    $.post("/tweets", input)
+    $.post("/tweets", safeText)
     .done(function(data) {
       var newTweet = createTweetElement(data);
       $("#tweet-container").prepend(newTweet);
