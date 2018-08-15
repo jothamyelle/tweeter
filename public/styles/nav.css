@@ -7,6 +7,26 @@ nav {
   color:#e8fdff;
   padding:0 2em;
 }
+nav ul {
+  margin-top:.5em;
+  float:right;
+  list-style: none;
+}
+
+nav button {
+  cursor: pointer;
+  color: #244751;
+  background-color:#d3ffe3;
+  font-size:1.5em;
+  height:60px;
+  border:solid black 1px;
+  border-radius:5px;
+  outline:none;
+}
+
+nav button:hover {
+  background-color: white;
+}
 
 #nav-bar .logo {
   max-width: 80px;

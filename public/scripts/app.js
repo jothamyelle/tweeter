@@ -38,7 +38,8 @@ function createTweetElement(tweetData) {
 }
 
 function renderTweets(tweets) {
-  tweets.forEach(tweetData => {
+  var reversedTweets = tweets.reverse();
+  reversedTweets.forEach(tweetData => {
     var $tweet = createTweetElement(tweetData);
     $('#tweet-container').append($tweet);
   });
