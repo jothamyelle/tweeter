@@ -1,0 +1,51 @@
+$navHeight: 80px;
+%logoAndHeader {
+  float:left;
+  margin-right:10px;
+}
+
+nav {
+  position:fixed;
+  z-index:1;
+  height:$navHeight;
+  width:100%;
+  background-color:  #00a087;
+  color:#e8fdff;
+  padding:0 2em;
+
+  ul {
+    margin-top:.5em;
+    float:right;
+    list-style: none;
+  }
+
+  button {
+    cursor: pointer;
+    color: #244751;
+    background-color:#d3ffe3;
+    font-size:1.5em;
+    height:60px;
+    border:solid black 1px;
+    border-radius:5px;
+    outline:none;
+  }
+
+  button:hover {
+    background-color: white;
+  }
+}
+
+
+#nav-bar {
+  .logo {
+    @extend %logoAndHeader;
+    max-width: $navHeight;
+    max-height: $navHeight;
+  }
+
+  .header {
+    @extend %logoAndHeader;
+    font-size:2em;
+    line-height: $navHeight;
+  }
+}
