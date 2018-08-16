@@ -1,12 +1,17 @@
 $(document).ready(function() {
+  
+  function displayErrorMsg(msg) {
+    $("#errorMessage").text(msg).slideDown().css("display","block");
+  }
+
   $("form").on("submit", function(event) {
     event.preventDefault();
     if ($("#textInput").val() === "") {
-      $("#errorMessage").text("Sorry, you can't submit an empty tweet!").slideDown().css("display","block");
+      displayErrorMsg("Sorry, you can't submit an empty tweet!");
       return false;
     }
     if ($("#textInput").val().length > 140) {
-      $("#errorMessage").text("Sorry, you can't submit a tweet that's longer than 140 characters!").slideDown().css("display","block");
+      displayErrorMsg("Sorry, you can't submit a tweet that's longer than 140 characters!");
       return false;
     }
     $("#errorMessage").slideUp();
