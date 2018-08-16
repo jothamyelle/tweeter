@@ -4,17 +4,23 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 function createTweetElement(tweetData) {
   var $avatar = tweetData.user.avatars.small;
   var $user = tweetData.user.name;
   var $handle = tweetData.user.handle;
-  var $userTweet = tweetData.content.text;
+  var $userTweet = escape(tweetData.content.text);
   var todaysDate = new Date();
   var tweetDate = new Date(tweetData.created_at);
   var newAge = todaysDate - tweetDate;
   var $tweetAge = Math.floor(newAge / (1000*60*60*24));
 
-  return `
+  return  `
   <article>
     <header>
       <img class="avatar" src="${$avatar}">
