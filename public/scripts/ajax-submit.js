@@ -1,6 +1,7 @@
 $(document).ready(function() {
-  
+
   function displayErrorMsg(msg) {
+    $("#errorMessage").slideUp();
     $("#errorMessage").text(msg).slideDown().css("display","block");
   }
 
@@ -20,7 +21,7 @@ $(document).ready(function() {
     $.post("/tweets", input)
     .done(function(data) {
       var newTweet = createTweetElement(data);
-      $("#tweet-container").prepend(newTweet);
+      $(newTweet).prependTo("#tweet-container").css("display","none").slideDown("fast");
       $("#textInput").val('');
     });
   });

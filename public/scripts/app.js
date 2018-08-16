@@ -47,7 +47,7 @@ function renderTweets(tweets) {
   var reversedTweets = tweets.reverse();
   reversedTweets.forEach(tweetData => { // returning an error since tweets are not an array
     var $tweet = createTweetElement(tweetData);
-    $('#tweet-container').append($tweet);
+    $($tweet).appendTo('#tweet-container').css("display","none").slideDown(850);
   });
 }
 
