@@ -27,7 +27,8 @@ module.exports = function(DataHelpers) {
     const tweet = {
       user: user,
       content: {
-        text: req.body.text
+        text: req.body.text,
+        likes: 0
       },
       created_at: Date.now()
     };
@@ -44,7 +45,13 @@ module.exports = function(DataHelpers) {
   tweetsRoutes.post("/likes/:id/:liked", function(req, res) {
     var tweetId = req.params.id;
     var liked = req.params.liked;
-    DataHelpers.saveLike(tweetId,liked);
+    DataHelpers.saveLike(tweetId,liked,(err) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.status(201).json("cool");
+      }
+    });
   });
 
   return tweetsRoutes;

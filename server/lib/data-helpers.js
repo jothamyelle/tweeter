@@ -17,7 +17,7 @@ module.exports = function makeDataHelpers(db) {
     },
 
     // saves likes to the db
-    saveLike: function(tweetID, liked) {
+    saveLike: function(tweetID, liked, callback) {
       db.collection("tweets").findOne({_id: ObjectID(tweetID)})
       .then((tweet) => {
         var likes = Number(tweet.content.likes);
@@ -28,6 +28,7 @@ module.exports = function makeDataHelpers(db) {
           newCount = likes + 1;
         }
         db.collection("tweets").updateOne({_id: ObjectID(tweetID)}, {$set: {"content.likes": newCount}});
+        callback(null, true);
       })
     }
 

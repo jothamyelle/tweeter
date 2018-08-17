@@ -24,6 +24,7 @@
 #tweet-container article footer img, #tweet-container article footer input {
   height: 1.5em;
   width: 1.5em;
+  cursor: pointer;
 }
 #tweet-container article footer .tweetAge {
   margin-right: 2em;

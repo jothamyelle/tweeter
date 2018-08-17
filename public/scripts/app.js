@@ -21,6 +21,9 @@ function createTweetElement(tweetData) {
   var $tweetAge = Math.floor(newAge / (1000*60*60*24));
   var $tweetID = tweetData._id;
   var $likes = tweetData.content.likes;
+  if (!($likes > 0)) {
+    $likes = 0;
+  }
 
   return  `
   <article>
