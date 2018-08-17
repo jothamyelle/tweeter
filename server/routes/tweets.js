@@ -41,6 +41,12 @@ module.exports = function(DataHelpers) {
     });
   });
 
+  tweetsRoutes.post("/likes/:id/:liked", function(req, res) {
+    var tweetId = req.params.id;
+    var liked = req.params.liked;
+    DataHelpers.saveLike(tweetId,liked);
+  });
+
   return tweetsRoutes;
 
 }

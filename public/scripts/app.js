@@ -19,6 +19,8 @@ function createTweetElement(tweetData) {
   var tweetDate = new Date(tweetData.created_at);
   var newAge = todaysDate - tweetDate;
   var $tweetAge = Math.floor(newAge / (1000*60*60*24));
+  var $tweetID = tweetData._id;
+  var $likes = tweetData.content.likes;
 
   return  `
   <article>
@@ -30,14 +32,15 @@ function createTweetElement(tweetData) {
     <div class="tweetArea">
       <span class="tweetText">${$userTweet}</span>
     </div>
-    <footer>
+    <footer class="tweetFooter">
       <div class="tweetAge">
-        <span>${$tweetAge} days ago</span>
+        <span class="tweetAge">${$tweetAge} days ago</span>
+        <span class="numLikes"><span>${$likes}</span> likes</span>
       </div>
       <div class="showOnHover">
-        <img src="images/reply.png">
-        <img src="images/retweet.png">
-        <img src="images/like.png">
+        <img class="replyIcon" src="images/reply.png"/>
+        <img class="retweetIcon" src="images/retweet.png"/>
+        <img  data-tweet-id="${$tweetID}" data-liked="false" class="likeIcon" src="images/like.png"/>
       </div>
     </footer>
   </article>`;

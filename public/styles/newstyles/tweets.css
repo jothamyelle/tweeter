@@ -25,6 +25,9 @@
   height: 1.5em;
   width: 1.5em;
 }
+#tweet-container article footer .tweetAge {
+  margin-right: 2em;
+}
 #tweet-container article footer .showOnHover {
   opacity: 0;
   float: right;
@@ -40,6 +43,7 @@
   font-size: 1.5em;
   position: absolute;
   margin-left: 0.5em;
+  max-width: 200px;
 }
 #tweet-container .handle {
   float: right;

@@ -24,9 +24,12 @@
       font-size:.75em;
       border-top:solid #bfbfbf 1px;
       
-      img {
+      img, input {
         height:1.5em;
         width:1.5em;
+      }
+      .tweetAge {
+        margin-right:2em;
       }
 
       .showOnHover {
@@ -46,6 +49,7 @@
     font-size:1.5em;
     position: absolute;
     margin-left:.5em;
+    max-width: 200px;
   }
   .handle {
     float: right;

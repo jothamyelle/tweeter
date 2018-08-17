@@ -11,16 +11,16 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700,700i" rel="stylesheet">
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/newStyles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/newstyles/layout.css" type="text/css" />
     
     <!-- Navbar CSS -->
-    <link rel="stylesheet" href="/styles/newStyles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/newstyles/nav.css" type="text/css" />
     
     <!-- New Tweet CSS -->
-    <link rel="stylesheet" href="/styles/newStyles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/newstyles/new-tweet.css" type="text/css" />
     
     <!-- Tweets CSS -->
-    <link rel="stylesheet" href="/styles/newStyles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/newstyles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -36,6 +36,10 @@
 
     <!-- Toggle Form JS -->
     <script type="text/javascript" src="/scripts/toggleForm.js"></script>
+
+    <!-- Icon Click JS -->
+    <script type="text/javascript" src="/scripts/imgClick.js"></script>
+
   </head>
 
   <body>
@@ -54,7 +58,7 @@
       <span id="errorMessage"></span>
       <section class="new-tweet">
           <h2>Compose Tweet</h2>
-          <form method="POST" action="/tweets">
+          <form id="tweetForm" method="POST" action="/tweets">
             <textarea id="textInput" name="text" placeholder="What are you humming about?"></textarea>
             <input type="submit" value="Tweet">
             <span class="counter">140</span>

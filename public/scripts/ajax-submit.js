@@ -1,11 +1,10 @@
 $(document).ready(function() {
 
   function displayErrorMsg(msg) {
-    $("#errorMessage").slideUp();
     $("#errorMessage").text(msg).slideDown().css("display","block");
   }
 
-  $("form").on("submit", function(event) {
+  $("form#tweetForm").on("submit", function(event) {
     event.preventDefault();
     if ($("#textInput").val() === "") {
       displayErrorMsg("Sorry, you can't submit an empty tweet!");
