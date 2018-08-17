@@ -1,43 +1,47 @@
-#nav-bar .header, #nav-bar .logo {
-  float: left;
-  margin-right: 10px;
-}
-
 nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   position: fixed;
   z-index: 1;
   height: 80px;
   width: 100%;
   background-color: #00a087;
   color: #e8fdff;
-  padding: 0 2em;
+  padding: 10px;
 }
+
 nav ul {
-  margin-top: 0.5em;
-  float: right;
+  padding-left: 0;
+  order: 3;
   list-style: none;
 }
+
 nav button {
   cursor: pointer;
   color: #244751;
   background-color: #d3ffe3;
-  font-size: 1.5em;
-  height: 60px;
+  font-size: 1em;
+  height: 40px;
   border: solid black 1px;
   border-radius: 5px;
   outline: none;
 }
+
 nav button:hover {
   background-color: white;
 }
 
 #nav-bar .logo {
   max-width: 80px;
-  max-height: 80px;
+  order: 0;
+  flex-shrink: 10;
 }
+
 #nav-bar .header {
-  font-size: 2em;
-  line-height: 80px;
+  order: 1;
+  margin: 0 0.35em;
+  font-size: calc(10px + 3.5vw);
 }
 
 /*# sourceMappingURL=nav.css.map */

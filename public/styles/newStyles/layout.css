@@ -6,25 +6,35 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  font-family: "Roboto Condensed", sans-serif;
-  margin: 0;
-  color: #244751;
-  background-color: #eee;
+@media (max-width: 380px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 0 20px 0;
+    background-color: #ffffff;
+  }
 }
+@media (min-width: 381px) {
+  body {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    color: #244751;
+    background-color: #eee;
+  }
 
-main {
-  width: 450px;
-  margin: 0 auto;
-  padding: 120px 0 20px 0;
-  background-color: #ffffff;
-}
+  main {
+    width: 450px;
+    margin: 0 auto;
+    padding: 120px 0 20px 0;
+    background-color: #ffffff;
+  }
 
-#errorMessage, #errorMessage2 {
-  color: red;
-  text-align: center;
-  margin: 0 2em 1em;
-  display: none;
+  #errorMessage, #errorMessage2 {
+    color: red;
+    text-align: center;
+    margin: 0 2em 1em;
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=layout.css.map */
