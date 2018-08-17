@@ -1,23 +1,32 @@
-#tweet-container article header, #tweet-container article {
+#tweet-container article {
   border-radius: 5px;
 }
 
 #tweet-container article {
-  margin: 1em 2em;
+  margin: 1em 1em;
   opacity: 0.7;
   border: solid #bfbfbf 1px;
   margin-bottom: 2em;
 }
 #tweet-container article header {
+  display: flex;
   padding: 0.5em;
   background-color: #eee;
+}
+#tweet-container article header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #tweet-container article img.avatar {
   height: 50px;
   width: 50px;
 }
 #tweet-container article footer {
-  padding: 1em 1em 2.25em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
   font-size: 0.75em;
   border-top: solid #bfbfbf 1px;
 }
@@ -42,12 +51,11 @@
 #tweet-container .user {
   font-weight: bold;
   font-size: 1.5em;
-  position: absolute;
   margin-left: 0.5em;
   max-width: 200px;
 }
 #tweet-container .handle {
-  float: right;
+  margin-left: 0.5em;
 }
 #tweet-container .tweetAge {
   max-width: 50%;
@@ -56,6 +64,16 @@
 #tweet-container .tweetArea {
   word-wrap: break-word;
   padding: 2em 1em;
+}
+
+@media (min-width: 800px) {
+  #tweet-container article {
+    margin: 1em 2em;
+  }
+  #tweet-container article header div {
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=tweets.css.map */

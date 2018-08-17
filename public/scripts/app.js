@@ -29,8 +29,10 @@ function createTweetElement(tweetData) {
   <article>
     <header>
       <img class="avatar" src="${$avatar}">
-      <span class="user">${$user}</span>
-      <span class="handle">${$handle}</span>
+      <div>
+        <span class="user">${$user}</span>
+        <span class="handle">${$handle}</span>
+      </div>
     </header>
     <div class="tweetArea">
       <span class="tweetText">${$userTweet}</span>
