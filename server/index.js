@@ -18,7 +18,8 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     db.close();
     console.error(`Failed to connect: ${MONGODB_URI}`);
     throw err;
-  }
+  } 
+  console.log("MongoDB running: ",db)
   const DataHelpers = require("./lib/data-helpers.js")(db);
   
   // The `tweets-routes` module works similarly: we pass it the `DataHelpers` object
