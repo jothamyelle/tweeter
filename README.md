@@ -24,5 +24,5 @@ Tweeter App is the greatest Twitter copycat you'll ever lay your eyes on... mayb
 
 ## Features
 
-- post and view tweets using a randomly generated name
+- post, view, and like tweets using a randomly generated name
 - responsive design
