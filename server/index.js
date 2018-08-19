@@ -2,7 +2,7 @@ require('dotenv').config();
 "use strict";
 
 // Basic express setup:
-const PORT          = process.env.PORT;
+const PORT          = process.env.PORT || 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
@@ -29,6 +29,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   app.use("/tweets", tweetsRoutes);
   
   app.listen(PORT, () => {
-    console.log("App is currently running successfully");
+    console.log(`App is currently running successfully on Port: ${PORT}`);
   });
 });
